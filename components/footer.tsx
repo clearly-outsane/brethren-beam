@@ -20,7 +20,7 @@ export function Footer() {
           </a>
         </span>
       </div>
-      <a
+      {/* <a
         href="https://github.com/planetscale/beam"
         target="_blank"
         rel="noreferrer"
@@ -28,7 +28,7 @@ export function Footer() {
       >
         <GithubLogo className="w-4 h-4" />
         <span>Version {packageJson.version}</span>
-      </a>
+      </a> */}
     </footer>
   )
 }
