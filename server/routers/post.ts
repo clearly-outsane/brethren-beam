@@ -244,7 +244,7 @@ export const postRouter = createProtectedRouter()
       if (!postBelongsToUser) {
         throw new TRPCError({ code: 'FORBIDDEN' })
       }
-
+      await ctx.prisma.likedPosts.deleteMany({ where: { postId: id } }) // * Delete likes or anything linked to the post first or else it will throw an error
       await ctx.prisma.post.delete({ where: { id } })
       return id
     },
